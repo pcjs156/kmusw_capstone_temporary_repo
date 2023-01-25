@@ -28,7 +28,8 @@ DJANGO_DEFAULT_APPS = [
 ]
 
 DRF_APPS = [
-    'rest_framework'
+    'rest_framework',
+    'graphene_django',
 ]
 
 SERVICE_APPS = [
@@ -122,3 +123,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 기본 사용자 설정
 AUTH_USER_MODEL = 'auth_app.User'
+
+# Graphene-Django 관련 설정
+GRAPHENE = {
+    'SCHEMA': 'auth_app.schema.schema',
+}
